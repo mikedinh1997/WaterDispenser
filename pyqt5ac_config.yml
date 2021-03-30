@@ -1,0 +1,11 @@
+ioPaths:
+  -
+    - "./Windows/*.ui"
+    - "./Windows/%%FILENAME%%_ui.py"
+  -
+    - "./Widgets/*.ui"
+    - "./Widgets/%%FILENAME%%_ui.py"
+
+uic_options: --from-imports
+init_package: True
+force: False
