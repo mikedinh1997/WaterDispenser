@@ -1112,7 +1112,7 @@ QPushButton:hover{
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
-	font-size: 15px;
+	font-size: 11px;
 	font-weight: bold;
 	color: white;
 	background-color: rgb(36, 36, 36);
@@ -1150,7 +1150,7 @@ QPushButton:hover{
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
-	font-size: 15px;
+	font-size: 11px;
 	font-weight: bold;
 	color: white;
 	background-color: rgb(36, 36, 36);

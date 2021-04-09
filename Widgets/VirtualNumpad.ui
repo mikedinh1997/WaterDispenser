@@ -124,6 +124,8 @@
 	color: white;
 	background-color: rgb(36, 36, 36);
 	border-radius: 5px;
+	font-size: 11px;
+
 }
 
 QPushButton:hover{
@@ -161,6 +163,7 @@ QPushButton:hover{
 	color: white;
 	background-color: rgb(36, 36, 36);
 	border-radius: 5px;
+	font-size: 11px;
 }
 
 QPushButton:hover{
@@ -168,7 +171,7 @@ QPushButton:hover{
 }</string>
          </property>
          <property name="text">
-          <string>LEFT</string>
+          <string/>
          </property>
          <property name="iconSize">
           <size>
@@ -204,6 +207,7 @@ QPushButton:hover{
 	color: white;
 	background-color: rgb(36, 36, 36);
 	border-radius: 5px;
+	font-size: 11px;
 }
 
 QPushButton:hover{
@@ -211,7 +215,7 @@ QPushButton:hover{
 }</string>
          </property>
          <property name="text">
-          <string>RIGHT</string>
+          <string/>
          </property>
          <property name="iconSize">
           <size>
@@ -247,6 +251,7 @@ QPushButton:hover{
 	color: white;
 	background-color: rgb(36, 36, 36);
 	border-radius: 5px;
+	font-size: 11px;
 }
 
 QPushButton:hover{
@@ -254,7 +259,7 @@ QPushButton:hover{
 }</string>
          </property>
          <property name="text">
-          <string>GO BACK</string>
+          <string>BACK</string>
          </property>
          <property name="iconSize">
           <size>
@@ -404,6 +409,7 @@ QPushButton:hover{
 	color: white;
 	background-color: rgb(36, 36, 36);
 	border-radius: 5px;
+	font-size: 11px;
 }
 
 QPushButton:hover{
@@ -675,6 +681,7 @@ QPushButton:hover{
 	color: white;
 	background-color: rgb(36, 36, 36);
 	border-radius: 5px;
+	font-size: 11px;
 }
 
 QPushButton:hover{

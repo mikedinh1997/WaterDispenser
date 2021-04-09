@@ -674,7 +674,7 @@ class Ui_VirtualKeyboardBox(object):
         self.goBackButton.setMinimumSize(QtCore.QSize(70, 0))
         self.goBackButton.setMaximumSize(QtCore.QSize(70, 16777215))
         self.goBackButton.setStyleSheet("QPushButton{\n"
-"    font-size: 15px;\n"
+"    font-size: 11px;\n"
 "    font-weight: bold;\n"
 "    color: white;\n"
 "    background-color: rgb(36, 36, 36);\n"
@@ -695,7 +695,7 @@ class Ui_VirtualKeyboardBox(object):
         self.clearButton.setMinimumSize(QtCore.QSize(70, 0))
         self.clearButton.setMaximumSize(QtCore.QSize(70, 16777215))
         self.clearButton.setStyleSheet("QPushButton{\n"
-"    font-size: 15px;\n"
+"    font-size: 11px;\n"
 "    font-weight: bold;\n"
 "    color: white;\n"
 "    background-color: rgb(36, 36, 36);\n"
