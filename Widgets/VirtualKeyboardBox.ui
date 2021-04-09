@@ -815,7 +815,7 @@ QPushButton:hover{
 }</string>
          </property>
          <property name="text">
-          <string/>
+          <string>CAPS</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1044,7 +1044,7 @@ QPushButton:hover{
 }</string>
          </property>
          <property name="text">
-          <string/>
+          <string>CAPS</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1219,7 +1219,7 @@ QPushButton:hover{
 }</string>
          </property>
          <property name="text">
-          <string/>
+          <string>LEFT</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1250,7 +1250,7 @@ QPushButton:hover{
 }</string>
          </property>
          <property name="text">
-          <string/>
+          <string>RIGHT</string>
          </property>
          <property name="iconSize">
           <size>

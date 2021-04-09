@@ -496,7 +496,6 @@ class Ui_VirtualKeyboardBox(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(207, 207, 207)\n"
 "}")
-        self.lCapButton.setText("")
         self.lCapButton.setIconSize(QtCore.QSize(120, 52))
         self.lCapButton.setObjectName("lCapButton")
         self.horizontalLayout_16.addWidget(self.lCapButton)
@@ -654,7 +653,6 @@ class Ui_VirtualKeyboardBox(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(207, 207, 207)\n"
 "}")
-        self.rCapButton.setText("")
         self.rCapButton.setIconSize(QtCore.QSize(120, 50))
         self.rCapButton.setObjectName("rCapButton")
         self.horizontalLayout_16.addWidget(self.rCapButton)
@@ -743,7 +741,6 @@ class Ui_VirtualKeyboardBox(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(207, 207, 207)\n"
 "}")
-        self.leftArrowButton.setText("")
         self.leftArrowButton.setIconSize(QtCore.QSize(70, 51))
         self.leftArrowButton.setObjectName("leftArrowButton")
         self.horizontalLayout.addWidget(self.leftArrowButton)
@@ -763,7 +760,6 @@ class Ui_VirtualKeyboardBox(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(207, 207, 207)\n"
 "}")
-        self.rightArrowButton.setText("")
         self.rightArrowButton.setIconSize(QtCore.QSize(70, 51))
         self.rightArrowButton.setObjectName("rightArrowButton")
         self.horizontalLayout.addWidget(self.rightArrowButton)
@@ -798,6 +794,7 @@ class Ui_VirtualKeyboardBox(object):
         self.jButton.setText(_translate("VirtualKeyboardBox", "j"))
         self.kButton.setText(_translate("VirtualKeyboardBox", "k"))
         self.lButton.setText(_translate("VirtualKeyboardBox", "l"))
+        self.lCapButton.setText(_translate("VirtualKeyboardBox", "CAPS"))
         self.zButton.setText(_translate("VirtualKeyboardBox", "z"))
         self.xButton.setText(_translate("VirtualKeyboardBox", "x"))
         self.cButton.setText(_translate("VirtualKeyboardBox", "c"))
@@ -805,6 +802,9 @@ class Ui_VirtualKeyboardBox(object):
         self.bButton.setText(_translate("VirtualKeyboardBox", "b"))
         self.nButton.setText(_translate("VirtualKeyboardBox", "n"))
         self.mButton.setText(_translate("VirtualKeyboardBox", "m"))
+        self.rCapButton.setText(_translate("VirtualKeyboardBox", "CAPS"))
         self.goBackButton.setText(_translate("VirtualKeyboardBox", "GO BACK"))
         self.clearButton.setText(_translate("VirtualKeyboardBox", "CLEAR"))
         self.spaceButton.setText(_translate("VirtualKeyboardBox", "SPACE"))
+        self.leftArrowButton.setText(_translate("VirtualKeyboardBox", "LEFT"))
+        self.rightArrowButton.setText(_translate("VirtualKeyboardBox", "RIGHT"))

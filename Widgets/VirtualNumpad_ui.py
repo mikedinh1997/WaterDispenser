@@ -91,7 +91,6 @@ class Ui_VirtualNumpad(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(207, 207, 207)\n"
 "}")
-        self.leftArrowButton.setText("")
         self.leftArrowButton.setIconSize(QtCore.QSize(70, 51))
         self.leftArrowButton.setObjectName("leftArrowButton")
         self.gridLayout.addWidget(self.leftArrowButton, 0, 1, 1, 1)
@@ -114,7 +113,6 @@ class Ui_VirtualNumpad(object):
 "QPushButton:hover{\n"
 "    background-color: rgb(207, 207, 207)\n"
 "}")
-        self.rightArrowButton.setText("")
         self.rightArrowButton.setIconSize(QtCore.QSize(70, 51))
         self.rightArrowButton.setObjectName("rightArrowButton")
         self.gridLayout.addWidget(self.rightArrowButton, 0, 2, 1, 1)
@@ -428,6 +426,8 @@ class Ui_VirtualNumpad(object):
         VirtualNumpad.setWindowTitle(_translate("VirtualNumpad", "VirtualNumpad"))
         self.weightEdit.setPlaceholderText(_translate("VirtualNumpad", "Weight"))
         self.clearButton.setText(_translate("VirtualNumpad", "CLR"))
+        self.leftArrowButton.setText(_translate("VirtualNumpad", "LEFT"))
+        self.rightArrowButton.setText(_translate("VirtualNumpad", "RIGHT"))
         self.goBackButton.setText(_translate("VirtualNumpad", "BACK"))
         self.sevenButton.setText(_translate("VirtualNumpad", "7"))
         self.eightButton.setText(_translate("VirtualNumpad", "8"))

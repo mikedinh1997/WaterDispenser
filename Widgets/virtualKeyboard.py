@@ -36,12 +36,12 @@ class VirtualKeyboard(QDialog, VirtualKeyboard_ui.Ui_VirtualKeyboard):
 
         # self.nameEdit.setFocus()
 
-        self.lCapButton.setIcon(QIcon('./Icons/up_arrow.png'))
-        self.rCapButton.setIcon(QIcon('./Icons/up_arrow.png'))
+        # self.lCapButton.setIcon(QIcon('./Icons/up_arrow.png'))
+        # self.rCapButton.setIcon(QIcon('./Icons/up_arrow.png'))
         self.enterButton.setIcon(QIcon('./Icons/enter.png'))
         self.deleteButton.setIcon(QIcon('./Icons/backspace.png'))
-        self.leftArrowButton.setIcon(QIcon('./Icons/left_arrow.png'))
-        self.rightArrowButton.setIcon(QIcon('./Icons/right_arrow.png'))
+        # self.leftArrowButton.setIcon(QIcon('./Icons/left_arrow.png'))
+        # self.rightArrowButton.setIcon(QIcon('./Icons/right_arrow.png'))
 
         self.alphabetButtons = \
             [[self.qButton,                ['q', 'Q', 'Q']],

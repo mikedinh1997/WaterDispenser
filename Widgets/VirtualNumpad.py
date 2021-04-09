@@ -17,8 +17,8 @@ class VirtualNumpad(QDialog, VirtualNumpad_ui.Ui_VirtualNumpad):
         super(VirtualNumpad, self).__init__(parent)
         self.setupUi(self)
 
-        self.leftArrowButton.setIcon(QIcon('./Icons/left_arrow.png'))
-        self.rightArrowButton.setIcon(QIcon('./Icons/right_arrow.png'))
+        # self.leftArrowButton.setIcon(QIcon('./Icons/left_arrow.png'))
+        # self.rightArrowButton.setIcon(QIcon('./Icons/right_arrow.png'))
 
         self.parentLineEdit = parentLineEdit
         self.setAttribute(QtCore.Qt.WA_StyledBackground, True)
