@@ -2,7 +2,7 @@
 
 ## Installation
 
-###Raspberry Pi OS
+### Raspberry Pi OS
 Install pip3 and Python 3
 ```
 sudo apt-get install python3-pip
