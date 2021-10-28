@@ -118,3 +118,7 @@ class UserDatabase:
         userIndex = self.userDatabase.index(user)
         self.userDatabase[userIndex] = user
         self.updateDatabase()
+
+    def deleteUser(self, user_):
+        self.userDatabase = [user for user in self.userDatabase if user is not user_]
+        self.updateDatabase()

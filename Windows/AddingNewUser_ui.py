@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\quang\OneDrive - Southern Illinois University Edwardsville\Water-Dispenser\Windows\AddingNewUser.ui'
+# Form implementation generated from reading ui file 'E:\Senior Design\WaterDispenser\Windows\AddingNewUser.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
@@ -28,7 +28,7 @@ class Ui_AddingNewUser(object):
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem1)
         self.label = QtWidgets.QLabel(AddingNewUser)
-        self.label.setStyleSheet("font-size: 20px;")
+        self.label.setStyleSheet("font-size: 24px;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.horizontalLayout_6.addWidget(self.label)
@@ -44,14 +44,14 @@ class Ui_AddingNewUser(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label_2 = QtWidgets.QLabel(AddingNewUser)
-        self.label_2.setStyleSheet("font-size: 13px;\n"
+        self.label_2.setStyleSheet("font-size: 20px;\n"
 "")
         self.label_2.setObjectName("label_2")
         self.horizontalLayout.addWidget(self.label_2)
         self.firstNameEdit = QtWidgets.QLineEdit(AddingNewUser)
         self.firstNameEdit.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.firstNameEdit.setAcceptDrops(False)
-        self.firstNameEdit.setStyleSheet("font-size: 13px;")
+        self.firstNameEdit.setStyleSheet("font-size: 20px;")
         self.firstNameEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.firstNameEdit.setObjectName("firstNameEdit")
         self.horizontalLayout.addWidget(self.firstNameEdit)
@@ -68,14 +68,14 @@ class Ui_AddingNewUser(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.label_3 = QtWidgets.QLabel(AddingNewUser)
-        self.label_3.setStyleSheet("font-size: 13px;\n"
+        self.label_3.setStyleSheet("font-size: 20px;\n"
 "")
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_2.addWidget(self.label_3)
         self.lastNameEdit = QtWidgets.QLineEdit(AddingNewUser)
         self.lastNameEdit.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.lastNameEdit.setAcceptDrops(False)
-        self.lastNameEdit.setStyleSheet("font-size: 13px;")
+        self.lastNameEdit.setStyleSheet("font-size: 20px;")
         self.lastNameEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.lastNameEdit.setObjectName("lastNameEdit")
         self.horizontalLayout_2.addWidget(self.lastNameEdit)
@@ -92,14 +92,14 @@ class Ui_AddingNewUser(object):
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.label_4 = QtWidgets.QLabel(AddingNewUser)
-        self.label_4.setStyleSheet("font-size: 13px;\n"
+        self.label_4.setStyleSheet("font-size: 20px;\n"
 "")
         self.label_4.setObjectName("label_4")
         self.horizontalLayout_8.addWidget(self.label_4)
         self.currentWeightEdit = QtWidgets.QLineEdit(AddingNewUser)
         self.currentWeightEdit.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.currentWeightEdit.setAcceptDrops(False)
-        self.currentWeightEdit.setStyleSheet("font-size: 13px;")
+        self.currentWeightEdit.setStyleSheet("font-size: 20px;")
         self.currentWeightEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.currentWeightEdit.setObjectName("currentWeightEdit")
         self.horizontalLayout_8.addWidget(self.currentWeightEdit)
@@ -130,7 +130,7 @@ class Ui_AddingNewUser(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.backButton.sizePolicy().hasHeightForWidth())
         self.backButton.setSizePolicy(sizePolicy)
-        self.backButton.setStyleSheet("font-size: 13px;")
+        self.backButton.setStyleSheet("font-size: 18px;")
         self.backButton.setAutoDefault(False)
         self.backButton.setObjectName("backButton")
         self.horizontalLayout_4.addWidget(self.backButton)
@@ -142,7 +142,7 @@ class Ui_AddingNewUser(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.saveAndReturnButton.sizePolicy().hasHeightForWidth())
         self.saveAndReturnButton.setSizePolicy(sizePolicy)
-        self.saveAndReturnButton.setStyleSheet("font-size: 13px;")
+        self.saveAndReturnButton.setStyleSheet("font-size: 18px;")
         self.saveAndReturnButton.setAutoDefault(False)
         self.saveAndReturnButton.setObjectName("saveAndReturnButton")
         self.horizontalLayout_4.addWidget(self.saveAndReturnButton)
@@ -154,7 +154,7 @@ class Ui_AddingNewUser(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.saveAndContinueButton.sizePolicy().hasHeightForWidth())
         self.saveAndContinueButton.setSizePolicy(sizePolicy)
-        self.saveAndContinueButton.setStyleSheet("font-size: 13px;")
+        self.saveAndContinueButton.setStyleSheet("font-size: 18px;")
         self.saveAndContinueButton.setAutoDefault(False)
         self.saveAndContinueButton.setObjectName("saveAndContinueButton")
         self.horizontalLayout_4.addWidget(self.saveAndContinueButton)
@@ -178,5 +178,5 @@ class Ui_AddingNewUser(object):
         self.label_4.setText(_translate("AddingNewUser", "Current weight"))
         self.currentWeightEdit.setPlaceholderText(_translate("AddingNewUser", "Current Weight"))
         self.backButton.setText(_translate("AddingNewUser", "Back"))
-        self.saveAndReturnButton.setText(_translate("AddingNewUser", "Save and Return to User Selection"))
-        self.saveAndContinueButton.setText(_translate("AddingNewUser", "Save and Continue to Dispense"))
+        self.saveAndReturnButton.setText(_translate("AddingNewUser", "Save and Return"))
+        self.saveAndContinueButton.setText(_translate("AddingNewUser", "Save and Continue"))

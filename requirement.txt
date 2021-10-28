@@ -1,19 +1,22 @@
 # Upgrade pip
-pip3 install --upgrade pip
-
-
-# PyQt 5
-sudo pip3 install pyqt5==5.14.0
-
-# Pandas
-sudo pip3 install pandas
-sudo pip3 install openpyxl
-
-#pyqt5ac
-git clone https://github.com/addisonElliott/pyqt5ac.git
+# pip3 install --upgrade pip
 
 #pyyml
-pip install pyyml
+PyYAML=6.0
+
+# PyQt 5
+# Raspberry Pi 4 sudo apt-get install python3-pyqt5
+# Windows 10 pip install pyqt5==5.14.0
+
+
+# Pandas
+pandas==1.3.4
+
+openpyxl==3.0.9
+
+# pyqt5ac
+# git clone https://github.com/addisonElliott/pyqt5ac.git
+
 
 
 

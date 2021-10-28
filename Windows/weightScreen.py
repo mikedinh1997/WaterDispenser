@@ -1,3 +1,5 @@
+import time
+
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import QIcon
@@ -7,6 +9,7 @@ from Widgets.VirtualNumpad import VirtualNumpad
 
 from Windows import WeightScreen_ui
 from Database.UserDatabase import *
+
 
 debug = False
 if debug:
@@ -53,8 +56,27 @@ class WeightScreen(QDialog, WeightScreen_ui.Ui_WeightScreen):
 
     def initialize(self):
         self.userNamelabel.setText(self.currentUser.firstName + ' ' + self.currentUser.lastName)
-        self.startWeightEdit.setText(str(self.currentUser.startWeight))
-        self.endWeightEdit.setText((str(self.currentUser.endWeight)))
+
+
+        startWeight = float(self.currentUser.startWeight)
+        endWeight = float(self.currentUser.endWeight)
+
+        if startWeight < endWeight:
+            self.notifyLabel.setEnabled(True)
+            self.notifyLabel.setText('Weight before workout is smaller than weight after workout \n'
+                                     'Please enter your post-workout weight again')
+            return
+        else:
+            self.notifyLabel.setEnabled(True)
+            self.notifyLabel.setText('')
+
+        self.startWeightEdit.setText(str(startWeight))
+        self.endWeightEdit.setText((str(endWeight)))
+
+        amountDispensed = (startWeight - endWeight) * 16
+
+        self.dispenseAmountLabel.setText(str(amountDispensed))
+
 
     @pyqtSlot("QWidget*", "QWidget*")
     def on_focusChanged(self, old, currentWidget):
@@ -99,6 +121,21 @@ class WeightScreen(QDialog, WeightScreen_ui.Ui_WeightScreen):
 
         self.userDatabase.updateUser(self.currentUser)
 
+        # Calculate amount of water to dipense
+        amountInOz = (startWeight - endWeight) * 16;
+
+        # Convert the calculated amount of water from oz to gram
+        # 1 oz = 28.35 grams
+        amountInGram = amountInOz * 28.35
+
+        try:
+
+            from Function.dispenser import dispense
+            dispense(goalVal=amountInGram)
+
+            self.notifyLabel.setText('Water dispensing is done. Please check your cup')
+        except Exception as e:
+            print('Failed to dispense water or check your wires.')
 
     @pyqtSlot()
     def on_endWeightEditFinished(self):
@@ -117,14 +154,22 @@ class WeightScreen(QDialog, WeightScreen_ui.Ui_WeightScreen):
             self.notifyLabel.setEnabled(True)
             self.notifyLabel.setText('')
 
-        amountDispensed = (startWeight - endWeight) * 18
+        amountDispensed = (startWeight - endWeight) * 16
 
         self.dispenseAmountLabel.setText(str(amountDispensed))
 
 
+    @pyqtSlot()
+    def on_deleteUserButton_clicked(self):
 
-
-
+        buttonReply = QMessageBox.question(self, 'Delete user', "Are you sure to remove yourself from the device?",
+                                           QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+        if buttonReply == QMessageBox.Yes:
+            self.userDatabase.deleteUser(self.currentUser)
+            self.close()
+            return
+        else:
+            return
 if debug:
     app = QApplication([])
     mw = WeightScreen()

@@ -76,6 +76,7 @@ class VirtualFullSizeKeyboard(QDialog, VirtualKeyboardBox_ui.Ui_VirtualKeyboardB
         for button in self.alphabetButtons:
             button[0].pressed.connect(self.alphabetButtonsPressed)
 
+        self.currentCharacterBtn = None
         self.changeKeyboardLayoutToUpper()
 
     def updateState(self):
@@ -98,6 +99,11 @@ class VirtualFullSizeKeyboard(QDialog, VirtualKeyboardBox_ui.Ui_VirtualKeyboardB
 
         # Get which button is pressed
         sender = self.sender()
+        
+        if self.currentCharacterBtn:
+            if self.currentCharacterBtn is sender:
+                return
+        
         for button in self.alphabetButtons:
             if button[0] is sender:
                 if self.keyboardState == KeyboardState.Lower:
@@ -108,6 +114,7 @@ class VirtualFullSizeKeyboard(QDialog, VirtualKeyboardBox_ui.Ui_VirtualKeyboardB
                         self.changeKeyboardLayoutToLower()
                     else:
                         self.nameEdit.insert((button[1][1]))
+                self.currentCharacterBtn = sender
                 self.nameEdit.setFocus()
 
     @pyqtSlot()

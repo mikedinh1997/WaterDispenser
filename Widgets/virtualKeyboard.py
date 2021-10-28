@@ -75,7 +75,9 @@ class VirtualKeyboard(QDialog, VirtualKeyboard_ui.Ui_VirtualKeyboard):
 
         for button in self.alphabetButtons:
             button[0].pressed.connect(self.alphabetButtonsPressed)
-
+        
+        self.currentCharacterBtn = None
+        
         self.changeKeyboardLayoutToUpper()
 
     def updateState(self):
@@ -84,9 +86,6 @@ class VirtualKeyboard(QDialog, VirtualKeyboard_ui.Ui_VirtualKeyboard):
                 button[0].setText(button[1][0])
             else:
                 button[0].setText(button[1][1])
-
-
-
 
     def changeKeyboardLayoutToUpper(self):
         self.keyboardState = KeyboardState.Lower
@@ -101,6 +100,11 @@ class VirtualKeyboard(QDialog, VirtualKeyboard_ui.Ui_VirtualKeyboard):
 
         # Get which button is pressed
         sender = self.sender()
+        
+        if self.currentCharacterBtn:
+            if self.currentCharacterBtn is sender:
+                return
+            
         for button in self.alphabetButtons:
             if button[0] is sender:
                 if self.keyboardState == KeyboardState.Lower:
@@ -111,6 +115,7 @@ class VirtualKeyboard(QDialog, VirtualKeyboard_ui.Ui_VirtualKeyboard):
                         self.changeKeyboardLayoutToLower()
                     else:
                         self.parentLineEdit.insert((button[1][1]))
+                self.currentCharacterBtn = sender
                 self.parentLineEdit.setFocus()
 
     @pyqtSlot()

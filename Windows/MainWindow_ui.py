@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\quang\OneDrive - Southern Illinois University Edwardsville\Water-Dispenser\Windows\MainWindow.ui'
+# Form implementation generated from reading ui file 'E:\Senior Design\WaterDispenser\Windows\MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.2
 #
@@ -24,12 +24,30 @@ class Ui_MainWindow(object):
         MainWindow.setStyleSheet("")
         self.gridLayout = QtWidgets.QGridLayout(MainWindow)
         self.gridLayout.setObjectName("gridLayout")
-        spacerItem = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        self.gridLayout.addItem(spacerItem, 0, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(20, 50, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.gridLayout.addItem(spacerItem, 3, 0, 1, 1)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        spacerItem1 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem1)
+        self.userListWidget = QtWidgets.QListWidget(MainWindow)
+        self.userListWidget.setStyleSheet("QListWidget {\n"
+"    font-size: 20px;\n"
+"}\n"
+" QListView::item:selected\n"
+"{\n"
+"    border : 2px solid black;\n"
+"    background : rgb(207, 207, 207);\n"
+"}")
+        self.userListWidget.setObjectName("userListWidget")
+        self.horizontalLayout_4.addWidget(self.userListWidget)
+        spacerItem2 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem2)
+        self.gridLayout.addLayout(self.horizontalLayout_4, 2, 0, 1, 1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        spacerItem1 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem1)
+        spacerItem3 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem3)
         self.nameSearchEdit = QtWidgets.QLineEdit(MainWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -48,88 +66,13 @@ class Ui_MainWindow(object):
         self.nameSearchEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.nameSearchEdit.setObjectName("nameSearchEdit")
         self.horizontalLayout_2.addWidget(self.nameSearchEdit)
-        spacerItem2 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem2)
-        self.gridLayout.addLayout(self.horizontalLayout_2, 1, 0, 1, 1)
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        spacerItem3 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem3)
-        self.userListWidget = QtWidgets.QListWidget(MainWindow)
-        self.userListWidget.setStyleSheet("QListWidget {\n"
-"    font-size: 20px;\n"
-"}\n"
-" QListView::item:selected\n"
-"{\n"
-"    border : 2px solid black;\n"
-"    background : rgb(207, 207, 207);\n"
-"}")
-        self.userListWidget.setObjectName("userListWidget")
-        self.horizontalLayout_4.addWidget(self.userListWidget)
         spacerItem4 = QtWidgets.QSpacerItem(200, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem4)
-        self.gridLayout.addLayout(self.horizontalLayout_4, 2, 0, 1, 1)
-        spacerItem5 = QtWidgets.QSpacerItem(20, 50, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        self.gridLayout.addItem(spacerItem5, 3, 0, 1, 1)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem6)
-        self.addNewUserButton = QtWidgets.QPushButton(MainWindow)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.addNewUserButton.sizePolicy().hasHeightForWidth())
-        self.addNewUserButton.setSizePolicy(sizePolicy)
-        self.addNewUserButton.setMinimumSize(QtCore.QSize(0, 100))
-        self.addNewUserButton.setStyleSheet("font-size: 13px;")
-        self.addNewUserButton.setObjectName("addNewUserButton")
-        self.horizontalLayout.addWidget(self.addNewUserButton)
-        spacerItem7 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem7)
-        self.deleteUserButton = QtWidgets.QPushButton(MainWindow)
-        self.deleteUserButton.setEnabled(True)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.deleteUserButton.sizePolicy().hasHeightForWidth())
-        self.deleteUserButton.setSizePolicy(sizePolicy)
-        self.deleteUserButton.setMinimumSize(QtCore.QSize(0, 0))
-        self.deleteUserButton.setStyleSheet("font-size: 13px;")
-        self.deleteUserButton.setObjectName("deleteUserButton")
-        self.horizontalLayout.addWidget(self.deleteUserButton)
-        spacerItem8 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem8)
-        self.gridLayout.addLayout(self.horizontalLayout, 4, 0, 1, 1)
-        spacerItem9 = QtWidgets.QSpacerItem(20, 91, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem9, 5, 0, 1, 1)
+        self.horizontalLayout_2.addItem(spacerItem4)
+        self.gridLayout.addLayout(self.horizontalLayout_2, 1, 0, 1, 1)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        spacerItem10 = QtWidgets.QSpacerItem(650, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem10)
-        self.restartButton = QtWidgets.QPushButton(MainWindow)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.restartButton.sizePolicy().hasHeightForWidth())
-        self.restartButton.setSizePolicy(sizePolicy)
-        self.restartButton.setMinimumSize(QtCore.QSize(50, 50))
-        self.restartButton.setMaximumSize(QtCore.QSize(50, 50))
-        self.restartButton.setStyleSheet("font-size: 13px;\n"
-" background-color: green;\n"
-" border-radius:20px;\n"
-" border-color: blue;\n"
-" max-width:50px;\n"
-" max-height:50px;\n"
-" min-width:50px;\n"
-" min-height:50px;\n"
-"")
-        self.restartButton.setText("")
-        self.restartButton.setObjectName("restartButton")
-        self.horizontalLayout_3.addWidget(self.restartButton)
-        spacerItem11 = QtWidgets.QSpacerItem(5, 17, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem11)
+        spacerItem5 = QtWidgets.QSpacerItem(650, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem5)
         self.powerOffButton = QtWidgets.QPushButton(MainWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -150,9 +93,31 @@ class Ui_MainWindow(object):
         self.powerOffButton.setText("")
         self.powerOffButton.setObjectName("powerOffButton")
         self.horizontalLayout_3.addWidget(self.powerOffButton)
-        spacerItem12 = QtWidgets.QSpacerItem(5, 17, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_3.addItem(spacerItem12)
+        spacerItem6 = QtWidgets.QSpacerItem(5, 17, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_3.addItem(spacerItem6)
         self.gridLayout.addLayout(self.horizontalLayout_3, 6, 0, 1, 1)
+        spacerItem7 = QtWidgets.QSpacerItem(20, 91, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout.addItem(spacerItem7, 5, 0, 1, 1)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 10, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.gridLayout.addItem(spacerItem8, 0, 0, 1, 1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        spacerItem9 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem9)
+        self.addNewUserButton = QtWidgets.QPushButton(MainWindow)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.addNewUserButton.sizePolicy().hasHeightForWidth())
+        self.addNewUserButton.setSizePolicy(sizePolicy)
+        self.addNewUserButton.setMinimumSize(QtCore.QSize(0, 100))
+        self.addNewUserButton.setStyleSheet("font-size: 20px;")
+        self.addNewUserButton.setObjectName("addNewUserButton")
+        self.horizontalLayout.addWidget(self.addNewUserButton)
+        spacerItem10 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout.addItem(spacerItem10)
+        self.gridLayout.addLayout(self.horizontalLayout, 4, 0, 1, 1)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -162,4 +127,3 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.nameSearchEdit.setPlaceholderText(_translate("MainWindow", "Search your name"))
         self.addNewUserButton.setText(_translate("MainWindow", "Add new user"))
-        self.deleteUserButton.setText(_translate("MainWindow", "Delete User"))

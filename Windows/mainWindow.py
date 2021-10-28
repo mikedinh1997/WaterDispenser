@@ -16,10 +16,10 @@ class MainWindow(QWidget, MainWindow_ui.Ui_MainWindow):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
         self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setWindowIcon(QIcon('./Icons/water-dispenser.png'))
         QtWidgets.QApplication.instance().focusChanged.connect(self.on_focusChanged)
 
         self.powerOffButton.setIcon(QIcon('./Icons/turn-off.png'))
-        self.restartButton.setIcon(QIcon('./Icons/restart-icon.png'))
 
         self.userDatabase = UserDatabase()
         self.searchKeyboard = None
@@ -32,19 +32,11 @@ class MainWindow(QWidget, MainWindow_ui.Ui_MainWindow):
         addingNewUserDialog = AddingNewUser(parent=self, userDatabase=self.userDatabase)
         addingNewUserDialog.show()
 
-
-    @pyqtSlot()
-    def on_restartButton_clicked(self):
-        # Show up a dialog to check again
-        resp = QMessageBox.question(self, 'Restart', 'Do you want to restart the device?',
-                                    QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-        if resp == QMessageBox.Yes:
-            print('Restart')
-            exit(0)
+        self.instantiateUserListWidget()
 
     def instantiateUserListWidget(self):
         usersList = self.userDatabase.getUsersList()
-
+        self.userListWidget.clear()
         for user in usersList:
             self.userListWidget.addItem("%s %s" % (user.lastName, user.firstName))
 
@@ -77,6 +69,8 @@ class MainWindow(QWidget, MainWindow_ui.Ui_MainWindow):
         weightScreenDialog = WeightScreen(parent=self, user=user, userDatabase=self.userDatabase)
         weightScreenDialog.show()
 
+        self.instantiateUserListWidget()
+
     @pyqtSlot(str)
     def on_nameSearchEdit_textChanged(self, keyword):
         self.userListWidget.clear()
@@ -91,8 +85,6 @@ class MainWindow(QWidget, MainWindow_ui.Ui_MainWindow):
             self.userListWidget.addItem("%s %s" % (user.lastName, user.firstName))
 
         self.userListWidget.sortItems(Qt.AscendingOrder)
-        
-
 
 
 

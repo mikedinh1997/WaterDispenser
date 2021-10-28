@@ -46,20 +46,24 @@ class VirtualNumpad(QDialog, VirtualNumpad_ui.Ui_VirtualNumpad):
         for button in self.numberButtons:
             button[0].pressed.connect(self.numberButtonsPressed)
 
-
-    # def close(self):
-    #     self.parentLineEdit.setFocus()
-    #     self.close()
+        self.currentDigitBtn = None
 
     @pyqtSlot()
     def numberButtonsPressed(self):
 
         # Get which button is pressed
         sender = self.sender()
+
+        if self.currentDigitBtn:
+            if self.currentDigitBtn is sender:
+                return
+
         for button in self.numberButtons:
             if button[0] is sender:
                 self.weightEdit.insert(str(button[1]))
                 self.weightEdit.setFocus()
+                self.currentDigitBtn = sender
+
 
     @pyqtSlot()
     def on_enterButton_clicked(self):
