@@ -24,7 +24,7 @@ sudo pip3 install 'package_name'=='package_version'
 In main.py, navigate path of ```pyqt5ac_config.yml``` to ```config``` argument. Try to run ```main.py``` now. 
 
 ### Windows 10
-Download and install Anaconda for Python 3 at https://www.anaconda.com/products/individual-d
+Download and install Anaconda for Python 3 at https://docs.anaconda.com/anaconda/install/windows/#
 
 #### PyCharm
 Download and install PyCharm at https://www.jetbrains.com/pycharm/download/#section=windows
