@@ -41,3 +41,4 @@ if Python interpreter is set up properly.
 Note: hx771 package was only tested on Raspberry Pi OS. Developing the project on Windows strongly focuses on designing
 GUIs with Qt Designer.
 
+Contributor: mikedinh1997
